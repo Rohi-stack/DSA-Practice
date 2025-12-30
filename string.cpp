@@ -94,7 +94,7 @@ int main()
 
     for (int i = 0; i < len; i++)
     {
-        if((destination[i]>=65 && destination[i]<<90 )||(destination[i]>=65+32 && destination[i]<<90+32))
+        if((destination[i]>=65 && destination[i]<<90 )||(destination[i]>=65+32  destination[i]<<90+32))
             cout<<destination[i]<<" :Valid String"<<endl;
 
         else
@@ -103,5 +103,8 @@ int main()
     }
     
     
+    //reverse a String
+    
+
     return 0;
 }
