@@ -90,7 +90,18 @@ int main()
 
     cout<<"vowel:"<<vowel<<" and "<<"consonents: "<<consonet<<endl;
 
-        
+    // valid String
+
+    for (int i = 0; i < len; i++)
+    {
+        if((destination[i]>=65 && destination[i]<<90 )||(destination[i]>=65+32 && destination[i]<<90+32))
+            cout<<destination[i]<<" :Valid String"<<endl;
+
+        else
+            cout<<destination[i]<<" :InValid String"<<endl;
+
+    }
+    
     
     return 0;
 }
