@@ -90,6 +90,7 @@ int main()
 
     cout<<"vowel:"<<vowel<<" and "<<"consonents: "<<consonet<<endl;
 
+        
     
     return 0;
 }
