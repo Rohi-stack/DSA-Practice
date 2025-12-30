@@ -57,6 +57,35 @@ int main()
         cout<<destination[i];
     }
     cout<<endl;
+
+    // counting vowel and consonents in a string called destination
+
+    i=0;
+    int vowel=0;
+    int consonet=0;
+    while (i<len)
+    {
+        if (destination[i]>=97 and destination[i]<=122)
+        {
+           if(destination[i]=='a'||destination[i]=='e'||destination[i]=='i'||destination[i]=='o'||destination[i]=='u')
+                    vowel++;
+            else
+               consonet++;
+        }
+        
+        if (destination[i]>=97 and destination[i]<=122)
+        {
+           if(destination[i]=='a'-32||destination[i]=='e'-32||destination[i]=='i'-32||destination[i]=='o'-32||destination[i]=='u'-32)
+                    vowel++;
+            else
+               consonet++;
+        }
+        
+
+        
+    }
+    
+
     
     return 0;
 }
