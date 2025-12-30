@@ -8,7 +8,7 @@ using std::string;
 int main()
 {
     // length of string
-    const char * name ="Singh 03-conditionals-loops";     // read only we can't write them 
+    const char * name ="Singh 03-conditionals-loops";     // read only we can't write them
     int i=0;
     // name.touppercase();
     while(name[i]!='\0'){
@@ -26,8 +26,8 @@ int main()
     }
     destination[i]='\0'; // null character at end of string if we don't add it garbage values will be printed and will be treated as part of string
     cout<<"Copied string is: "<<destination<<endl;
-    cout<<typeid(destination).name()<<endl; //A50_c means array of 50 characters     
-    
+    cout<<typeid(destination).name()<<endl; //A50_c means array of 50 characters
+
     // toUpperCase
     int len=i;
     for (int i = 0; i < len; i++)
@@ -36,7 +36,7 @@ int main()
             destination[i]-=32;
         }
     }
-    
+
     for (int i = 0; i < len; i++)
     {
         cout<<destination[i];
@@ -51,7 +51,7 @@ int main()
             destination[i]+=32;
         }
     }
-    
+
     for (int i = 0; i < len; i++)
     {
         cout<<destination[i];
@@ -72,7 +72,7 @@ int main()
             else
                consonet++;
         }
-        
+
         if (destination[i]>=65 and destination[i]<=90)
         {
 
@@ -83,9 +83,9 @@ int main()
         }
 
         i++;
-        
+
     }
-    
+
     cout<<destination<<" having length: "<<len<<endl;
 
     cout<<"vowel:"<<vowel<<" and "<<"consonents: "<<consonet<<endl;
@@ -94,15 +94,15 @@ int main()
 
     for (int i = 0; i < len; i++)
     {
-        if((destination[i]>=65 && destination[i]<<90 )||(destination[i]>=65+32 && destination[i]<<90+32))
+        if((destination[i]>=65 && destination[i]<=90 )||(destination[i]>=65+32 && destination[i]<=90+32))
             cout<<destination[i]<<" :Valid String"<<endl;
 
         else
             cout<<destination[i]<<" :InValid String"<<endl;
 
     }
-    
-    
+
+
     //reverse a String
 
     i=0;
@@ -118,12 +118,12 @@ int main()
     }
     cout<<"Reversed: ";
     cout<<destination<<endl;
-    
+
     i=0;
     j=len-1;
     while (j>i)
     {
-       
+
         temp=destination[i];
         destination[i]=destination[j];
         destination[j]=temp;
@@ -132,5 +132,31 @@ int main()
     }
     cout<<destination<<endl;
 
+    // palindrom or not
+    // 
+    string word="madam"; // or level
+    i=0;
+    j= word.length()-1;
+    int pal;
+    while (j>i)
+    {
+        if(word[i]!=word[j]){
+            pal=1;
+            break;
+        }
+
+        else {
+            pal=0;
+        }
+        i++;
+        j--;
+
+    }
+    if(pal==1){
+        cout<<"its nota palindrome."<<endl;
+    }
+    else {
+    cout<<"its a palindrome."<<endl;
+    }
     return 0;
 }
