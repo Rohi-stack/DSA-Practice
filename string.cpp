@@ -73,18 +73,22 @@ int main()
                consonet++;
         }
         
-        if (destination[i]>=97 and destination[i]<=122)
+        if (destination[i]>=65 and destination[i]<=90)
         {
+
            if(destination[i]=='a'-32||destination[i]=='e'-32||destination[i]=='i'-32||destination[i]=='o'-32||destination[i]=='u'-32)
                     vowel++;
             else
                consonet++;
         }
-        
 
+        i++;
         
     }
     
+    cout<<destination<<" having length: "<<len<<endl;
+
+    cout<<"vowel:"<<vowel<<" and "<<"consonents: "<<consonet<<endl;
 
     
     return 0;
