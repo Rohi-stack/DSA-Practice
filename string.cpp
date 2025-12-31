@@ -134,7 +134,7 @@ int main()
 
     // palindrom or not
     // 
-    string word="madam"; // or level
+    string word="madan"; // or level
     i=0;
     j= word.length()-1;
     int pal;
@@ -158,5 +158,46 @@ int main()
     else {
     cout<<"its a palindrome."<<endl;
     }
+    
+    // finding duplicates
+    // 1. compare with other
+    // 2. using hash table
+    // 3. using bits
+    // 
+    pal=0;
+    cout<<word<<endl;
+    for (int i=0; i<word.length(); i++) {
+        for (int j=i+1; j<word.length(); j++) {
+            
+            if(word[i]==word[j]){
+                pal=1;
+                break;
+            
+            }
+        }
+    }
+    
+    if(pal==0){
+        cout<<"NO duplicates"<<endl;
+    }
+    else {
+        cout<<"Having Duplicates"<<endl;
+    }
+    
+    // another method
+    int freq[26] = {0};   // for all ASCII characters
+    pal = 0;
+    
+    for (int i = 0; i < word.length(); i++) {
+        freq[word[i]-97]++;
+    
+        if (freq[word[i]-97] > 1) {
+            pal = 1;
+            break;
+        }
+    }
+    cout << (pal==1 ? "Having Duplicates" : "NO duplicates") << endl;
+
+    //using bit manupulation
     return 0;
 }
