@@ -198,6 +198,49 @@ int main()
     }
     cout << (pal==1 ? "Having Duplicates" : "NO duplicates") << endl;
 
-    //using bit manupulation
+    // By bit manipulation
+
+    //Anagram Check
+    string a="verbose";
+    string b="observe";
+    int freqq[26]={0};
+
+    for (int i = 0; i < a.length()-1; i++)
+    {
+        freqq[a[i]-97]++;
+        freqq[b[i]-97]--; 
+    }
+    int p=0;
+    // for (int i = 0; i < 26; i++)
+    // {
+    //     cout<<freqq[i]<<"  ";
+    // }
+    
+    if(a.length()==b.length()){
+    for (int i = 0; i < 26; i++)
+    {
+        if((freqq[i]!=0)){
+            p=1;
+            break;
+        }
+        
+    }
+}
+
+    if (p==1)
+    {
+        cout<<a<<" and "<<b<<" are Non-Anagram"<<endl;
+    }
+    else
+    {
+        cout<<a<<" and "<<b<<" are Anagram"<<endl;
+
+    }
+    
+    // permutation of string
+    
+    
+
+    
     return 0;
 }
